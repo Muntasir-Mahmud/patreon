@@ -8,6 +8,20 @@
       "when": 1688843335190,
       "tag": "0000_faulty_golden_guardian",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1690787973735,
+      "tag": "0001_worthless_robbie_robertson",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1690788112705,
+      "tag": "0002_equal_loki",
+      "breakpoints": true
     }
   ]
 }

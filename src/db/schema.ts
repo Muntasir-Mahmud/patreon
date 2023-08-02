@@ -12,10 +12,6 @@ export const user = pgTable("user", {
   createdAt: timestamp("created_at", { mode: "string" }).defaultNow(),
 });
 
-// export const usersRelations = relations(user, ({ many }) => ({
-// 	posts: many(posts),
-// }));
-
 export const creator = pgTable("creator", {
   id: serial("id").primaryKey().notNull(),
   name: varchar("name", { length: 30 }).notNull(),

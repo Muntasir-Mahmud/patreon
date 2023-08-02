@@ -2,6 +2,7 @@ import {
   integer,
   pgTable,
   serial,
+  text,
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
@@ -24,6 +25,7 @@ export const member = pgTable("member", {
 
 export const post = pgTable("post", {
   id: serial("id").primaryKey().notNull(),
+  content: text("content"),
   createdAt: timestamp("created_at", { mode: "string" }).defaultNow(),
   createdBy: integer("user_id").references(() => user.id),
 });

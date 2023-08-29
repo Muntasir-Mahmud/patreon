@@ -25,6 +25,9 @@ export const postRouter = createTRPCRouter({
   deletePost: publicProcedure
     .input(z.object({ id: z.number() }))
     .query(async ({ ctx, input }) => {
-      return await ctx.db.delete(post).where(eq(post.id, input.id));
+      return await ctx.db
+        .delete(post)
+        .where(eq(post.id, input.id))
+        .returning({ deleteId: post.id });
     }),
 });
